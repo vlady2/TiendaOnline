@@ -553,6 +553,16 @@ nav {
     cursor: pointer;    
 }
 
+/*.container {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    width: 100%;
+}*/
+
+/*.iframe-carrito {
+    display: none;
+}*/
+
 @media (max-width: 640px) {
     .logo {
         display: block;
