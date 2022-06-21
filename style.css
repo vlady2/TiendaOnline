@@ -44,6 +44,13 @@ body {
     text-align: center;
 }
 
+.title-container {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 16px;
+    align-items: center;
+}
+
 .tittle-secondary {
     font-size: var(--lg);
     margin-bottom: 30px;
@@ -374,6 +381,10 @@ body {
     align-items: center;
 }
 
+.shopping-cart img {
+    width: 15px;
+    height: 15px;
+}
 .shopping-cart figure {
     margin: 0;
 }
