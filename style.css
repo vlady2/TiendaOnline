@@ -517,16 +517,15 @@ nav {
     padding-bottom: 24px;
     position: absolute;
     right: 0;
-}
-
-.iframe-carrito {
-    position: absolute;
     z-index: 999;
     top: 50px;
     background-color: var(--white);
-    right: 0;
-    width: 360px;
-    height: 75%;
+    /*visibility: hidden;*/
+}
+
+.title-container button{
+    border-color: var(--white);
+    border-style: none;    
 }
 
 .product-detail > img:nth-child(2){
