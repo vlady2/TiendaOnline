@@ -33,7 +33,7 @@
         <div class="navbar-right">
             <ul>
                 <li class="navbar-email">
-                    <button>example@gmail.com</button>
+                    <button id="btnAccount">example@gmail.com</button>
                 </li>
                 <li class="navbar-shoping-cart">
                     <button id="btnShowCart">
@@ -220,19 +220,46 @@
             </button>
         </div>
     </aside>
-    
+    </div>
+    <div class="desktop-menu" id="pnDesktop">
+        <ul>
+            <li>
+                <a href="/" >My order</a>
+            </li>
+            <li>
+                <a href="/">My acount</a>
+            </li>
+            <li>
+                <a href="/">Sing out</a>
+            </li>
+        </ul>
     </div>
     <script>
         window.onload = function(){
             document.getElementById("pnCart").style.visibility  = 'hidden';
+            document.getElementById("pnDesktop").style.visibility = "hidden";
         };
 
         document.getElementById("btnLeftCar").addEventListener("click", function(){
             document.getElementById("pnCart").style.visibility = 'hidden'
         });
 
+        document.getElementById("btnAccount").addEventListener("click", function(){
+            if (document.getElementById("pnDesktop").style.visibility == ''){
+                document.getElementById("pnDesktop").style.visibility = 'hidden';
+            }
+            else{
+                document.getElementById("pnDesktop").style.visibility = '';
+            }
+        });
+
         document.getElementById("btnShowCart").addEventListener("click", function(){
-            document.getElementById("pnCart").style.visibility  = '';
+            if (document.getElementById("pnCart").style.visibility == ''){
+                document.getElementById("pnCart").style.visibility = 'hidden';
+            }
+            else{
+                document.getElementById("pnCart").style.visibility = '';
+            }
         });
     </script>
     </script>
