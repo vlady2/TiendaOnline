@@ -156,6 +156,7 @@ body {
 
 .resend {
     font-size: var(--sm);
+    text-align: center;
 }
 
 .resed span {

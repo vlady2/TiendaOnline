@@ -16,12 +16,19 @@
             <img src="logo/flower-g60dc56ce1_640.png" alt="logo" class="logo">
             <h1 class="tittle">Email has been</h1>
             <p class="subtitulo">Please check your inbox for instruction on how to reset the password</p>
-            <div class="email-image">
-                <img src="./logo/mail-gf3b572f1e_640.png" alt="" >
-            </div>
-            <button class="primary-button login-button">Login</button>
-            <p class="resend"><span>Didn't receive the email? </span><a href="/">resend</a></p>
+            <center>
+                <div class="email-image">
+                    <img src="./logo/mail-gf3b572f1e_640.png" alt="" >
+                </div>
+            </center>
+            <button id="btnresend" class="primary-button login-button">Login</button>
+            <p class="resend"><span>Didn't receive the email? </span><a href="email.html">resend</a></p>
         </div>
     </div>
+    <script>
+        document.getElementById("btnresend").addEventListener("click", function(){
+            window.location.href='login.html';
+        });
+    </script>
 </body>
 </html>
