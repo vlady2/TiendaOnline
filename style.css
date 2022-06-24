@@ -600,6 +600,12 @@ nav {
     cursor: pointer;    
 }
 
+@media (min-width: 640px) {
+    .mobile-menu {
+        visibility: hidden;
+    }
+}
+
 @media (max-width: 640px) {
     .logo {
         display: block;

@@ -48,7 +48,9 @@
         <section class="main-container">
             <div class="cards-container" id="pnproducts">
                 <div class="product-card">
-                    <img src="img/drums-ge30d6879e_640.jpg" alt="">
+                    <a onclick="detalleProduct()">
+                        <img src="img/drums-ge30d6879e_640.jpg" alt="">
+                    </a>
                     <div class="products-info">
                         <div>
                             <p>$120</p>
@@ -61,7 +63,9 @@
                 </div>
 
                 <div class="product-card">
-                    <img src="img/flute-g7e5ed94ac_640.jpg" alt="">
+                    <a onclick="detalleProduct()">
+                        <img src="img/flute-g7e5ed94ac_640.jpg" alt="">
+                    </a>
                     <div class="products-info">
                         <div>
                             <p>$120</p>
@@ -74,7 +78,9 @@
                 </div>
 
                 <div class="product-card">
-                    <img src="img/guitar-g83301a31e_640.jpg" alt="">
+                    <a onclick="detalleProduct()">
+                        <img src="img/guitar-g83301a31e_640.jpg" alt="">
+                    </a>
                     <div class="products-info">
                         <div>
                             <p>$120</p>
@@ -87,7 +93,9 @@
                 </div>
 
                 <div class="product-card">
-                    <img src="img/music-g67904117d_640.jpg" alt="">
+                    <a onclick="detalleProduct()">
+                        <img src="img/music-g67904117d_640.jpg" alt="">
+                    </a>
                     <div class="products-info">
                         <div>
                             <p>$120</p>
@@ -100,7 +108,9 @@
                 </div>
 
                 <div class="product-card">
-                    <img src="img/music-g834486dea_640.jpg" alt="">
+                    <a onclick="detalleProduct()">
+                        <img src="img/music-g834486dea_640.jpg" alt="">
+                    </a>
                     <div class="products-info">
                         <div>
                             <p>$120</p>
@@ -113,7 +123,9 @@
                 </div>
 
                 <div class="product-card">
-                    <img src="img/saxophone-g6c982a133_640.png" alt="">
+                    <a onclick="detalleProduct()">
+                        <img src="img/saxophone-g6c982a133_640.png" alt="">
+                    </a>
                     <div class="products-info">
                         <div>
                             <p>$120</p>
@@ -126,7 +138,9 @@
                 </div>
 
                 <div class="product-card">
-                    <img src="img/trumpet-g624b1b5c7_640.png" alt="">
+                    <a onclick="detalleProduct()">
+                        <img src="img/trumpet-g624b1b5c7_640.png" alt="">
+                    </a>
                     <div class="products-info">
                         <div>
                             <p>$120</p>
@@ -139,7 +153,9 @@
                 </div>
 
                 <div class="product-card">
-                    <img src="img/violin-g27317079b_640.png" alt="">
+                    <a onclick="detalleProduct()">
+                        <img src="img/violin-g27317079b_640.png" alt="">
+                    </a>
                     <div class="products-info">
                         <div>
                             <p>$120</p>
@@ -152,7 +168,9 @@
                 </div>
 
                 <div class="product-card">
-                    <img src="img/oboe-g3b2ac052e_640.png" alt="">
+                    <a onclick="detalleProduct()">
+                        <img src="img/oboe-g3b2ac052e_640.png" alt="">
+                    </a>
                     <div class="products-info">
                         <div>
                             <p>$120</p>
@@ -304,8 +322,16 @@
         });
 
         document.getElementById("logMenu").addEventListener("click", function(){
-            document.getElementById("pnMovil").style.visibility = '';
+            if (document.getElementById("pnMovil").style.visibility == ''){
+                document.getElementById("pnMovil").style.visibility = 'hidden';
+            } else {
+                document.getElementById("pnMovil").style.visibility = '';
+            }
         });
+
+        function detalleProduct(){
+            console.log("producto");
+        }
     </script>
 </body>
 </html>
