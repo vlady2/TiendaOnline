@@ -38,7 +38,7 @@
                 <li class="navbar-shoping-cart">
                     <button id="btnShowCart">
                         <img src="logo/cart-plus-solid.svg" alt="shopping cart">
-                        <div>2</div>
+                        <div id="contadorCar">4</div>
                     </button>
                 </li>
             </ul>
@@ -229,14 +229,12 @@
         <div class="product-info">
             <p>$35,00</p>
             <p id="pDetalle"></p>
-            <p>Contrary to popular belief, Lorem Ipsum is not 
+            <p>Lorem Ipsum is not 
                 simply random text. It has roots in a piece of 
                 classical Latin literature from 45 BC, making 
                 it over 2000 years old. Richard McClintock, a 
-                Latin professor at Hampden-Sydney College in 
-                Virginia, looked up one of the more obscure 
-                Latin words, consectetur</p>
-            <button class="primary-button add-to-cart-button">
+                Latin professor at Hampden-Sydney College</p>
+            <button id="btnAddCar" class="primary-button add-to-cart-button">
                 <img src="logo/add-to-cart.png" alt="add to cart">Add to cart
             </button>
         </div>
@@ -336,6 +334,11 @@
         document.getElementById("btnCloseDetail").addEventListener("click", function(){
             document.getElementById("pnProductDetail").style.visibility = 'hidden';     
         });
+
+        document.getElementById("btnAddCar").addEventListener("click", function(){
+            document.getElementById("pnProductDetail").style.visibility = 'hidden';
+        });
+
     </script>
 </body>
 </html>
