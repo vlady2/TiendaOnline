@@ -539,6 +539,8 @@ nav {
     z-index: 999;
     top: 50px;
     background-color: var(--white);
+    border-bottom: 1px solid var(--very-light-pink);
+    border-left: 1px solid var(--very-light-pink);
 }
 
 .title-container button{
