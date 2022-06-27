@@ -562,6 +562,7 @@ nav {
     position: absolute;
     top: 24px;
     left: 24px;
+    background-color: transparent;
     z-index: 2;
     padding: 12px;
     border-radius: 50%;

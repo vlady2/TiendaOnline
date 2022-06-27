@@ -48,9 +48,7 @@
         <section class="main-container">
             <div class="cards-container" id="pnproducts">
                 <div class="product-card">
-                    <a onclick="detalleProduct()">
-                        <img src="img/drums-ge30d6879e_640.jpg" alt="">
-                    </a>
+                    <img onclick="detalleProduct('bateria', this.src)" src="img/drums-ge30d6879e_640.jpg" alt="">
                     <div class="products-info">
                         <div>
                             <p>$120</p>
@@ -63,9 +61,7 @@
                 </div>
 
                 <div class="product-card">
-                    <a onclick="detalleProduct()">
-                        <img src="img/flute-g7e5ed94ac_640.jpg" alt="">
-                    </a>
+                    <img onclick="detalleProduct('flauta', this.src)" src="img/flute-g7e5ed94ac_640.jpg" alt="">
                     <div class="products-info">
                         <div>
                             <p>$120</p>
@@ -78,9 +74,7 @@
                 </div>
 
                 <div class="product-card">
-                    <a onclick="detalleProduct()">
-                        <img src="img/guitar-g83301a31e_640.jpg" alt="">
-                    </a>
+                    <img onclick="detalleProduct('guitarra', this.src)" src="img/guitar-g83301a31e_640.jpg" alt="">
                     <div class="products-info">
                         <div>
                             <p>$120</p>
@@ -93,9 +87,7 @@
                 </div>
 
                 <div class="product-card">
-                    <a onclick="detalleProduct()">
-                        <img src="img/music-g67904117d_640.jpg" alt="">
-                    </a>
+                    <img onclick="detalleProduct('clarinete', this.src)" src="img/music-g67904117d_640.jpg" alt="">
                     <div class="products-info">
                         <div>
                             <p>$120</p>
@@ -108,9 +100,7 @@
                 </div>
 
                 <div class="product-card">
-                    <a onclick="detalleProduct()">
-                        <img src="img/music-g834486dea_640.jpg" alt="">
-                    </a>
+                    <img onclick="detalleProduct('fagot', this.src)" src="img/music-g834486dea_640.jpg" alt="">
                     <div class="products-info">
                         <div>
                             <p>$120</p>
@@ -123,9 +113,7 @@
                 </div>
 
                 <div class="product-card">
-                    <a onclick="detalleProduct()">
-                        <img src="img/saxophone-g6c982a133_640.png" alt="">
-                    </a>
+                    <img onclick="detalleProduct('saxofon', this.src)" src="img/saxophone-g6c982a133_640.png" alt="">
                     <div class="products-info">
                         <div>
                             <p>$120</p>
@@ -138,9 +126,7 @@
                 </div>
 
                 <div class="product-card">
-                    <a onclick="detalleProduct()">
-                        <img src="img/trumpet-g624b1b5c7_640.png" alt="">
-                    </a>
+                    <img onclick="detalleProduct('trompeta', this.src)" src="img/trumpet-g624b1b5c7_640.png" alt="">
                     <div class="products-info">
                         <div>
                             <p>$120</p>
@@ -153,9 +139,7 @@
                 </div>
 
                 <div class="product-card">
-                    <a onclick="detalleProduct()">
-                        <img src="img/violin-g27317079b_640.png" alt="">
-                    </a>
+                    <img onclick="detalleProduct('violin', this.src)" src="img/violin-g27317079b_640.png" alt="">
                     <div class="products-info">
                         <div>
                             <p>$120</p>
@@ -168,9 +152,7 @@
                 </div>
 
                 <div class="product-card">
-                    <a onclick="detalleProduct()">
-                        <img src="img/oboe-g3b2ac052e_640.png" alt="">
-                    </a>
+                    <img onclick="detalleProduct('oboe', this.src)" src="img/oboe-g3b2ac052e_640.png" alt="">
                     <div class="products-info">
                         <div>
                             <p>$120</p>
@@ -239,6 +221,26 @@
             </div>
         </aside>
     </div>
+    <aside id="pnProductDetail" class="product-detail">
+        <div class="product-detail-close">
+            <img id="btnCloseDetail" src="logo/close.png" alt="">
+        </div>
+        <img id="imgDetalle" src="" alt="bike">
+        <div class="product-info">
+            <p>$35,00</p>
+            <p id="pDetalle"></p>
+            <p>Contrary to popular belief, Lorem Ipsum is not 
+                simply random text. It has roots in a piece of 
+                classical Latin literature from 45 BC, making 
+                it over 2000 years old. Richard McClintock, a 
+                Latin professor at Hampden-Sydney College in 
+                Virginia, looked up one of the more obscure 
+                Latin words, consectetur</p>
+            <button class="primary-button add-to-cart-button">
+                <img src="logo/add-to-cart.png" alt="add to cart">Add to cart
+            </button>
+        </div>
+    </aside>
     <div class="desktop-menu" id="pnDesktop">
         <ul>
             <li>
@@ -292,11 +294,13 @@
             </li>
         </ul>
     </div>
+    <script src="model.js"></script>
     <script>
         window.onload = function(){
             document.getElementById("pnCart").style.visibility  = 'hidden';
             document.getElementById("pnDesktop").style.visibility = 'hidden';
             document.getElementById("pnMovil").style.visibility = 'hidden';
+            document.getElementById("pnProductDetail").style.visibility = 'hidden';
         };
 
         document.getElementById("btnLeftCar").addEventListener("click", function(){
@@ -329,9 +333,9 @@
             }
         });
 
-        function detalleProduct(){
-            console.log("producto");
-        }
+        document.getElementById("btnCloseDetail").addEventListener("click", function(){
+            document.getElementById("pnProductDetail").style.visibility = 'hidden';     
+        });
     </script>
 </body>
 </html>
